@@ -1,7 +1,7 @@
 * {
   font-size: 14px;
 }
-img {
+.picture {
   width: 30px;
   height: 30px;
 }
@@ -23,6 +23,7 @@ img {
   justify-content: space-between;
   align-items: center;
   width: 250px;
+  padding-left: 10px;
 }
 .menu-item {
   box-sizing: border-box;
@@ -33,28 +34,23 @@ img {
   width: 30px;
   height: 30px;
 }
-.menu-item a img {
-  box-sizing: border-box;
-  margin-right: 0;
-  overflow: inherit;
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
 /*DropDown Btn*/
-.dropDownInput {
+.drop-down-input {
   -webkit-appearance: none;
   position: absolute;
   cursor: pointer;
   width: 30px;
   height: 30px;
 }
-
 /*DropDownMenu*/
-.DropDownMenu {
+.dropdown-container {
   display: none;
   position: absolute;
+  top: 67px;
+  right: 27px;
+}
+.drop-down-menu {
+  display: flex;
   top: 60px;
   right: 30px;
   list-style: none;
@@ -68,7 +64,7 @@ img {
   border-radius: 5px;
   overflow: auto;
 }
-.DropDownMenu-item {
+.drop-down-menu-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,17 +73,15 @@ img {
   padding-top: 5px;
   text-decoration: none;
 }
-
-.dropDownInput:checked ~ .DropDownMenu {
+.drop-down-input:checked ~ .dropdown-container {
   display: flex;
 }
-
 /*btn-more*/
 .btn {
   width: 100%;
   justify-content: center;
 }
-.BtnMore-Label {
+.btn-more-label {
   display: block;
   width: 100%;
   border-radius: 3px;
@@ -95,20 +89,18 @@ img {
   cursor: pointer;
   background: #80a5a6;
 }
-
-.BtnMore {
+.btn-more {
   -webkit-appearance: none;
   cursor: pointer;
   background: #80a5a6;
   position: absolute;
   width: 100%;
 }
-.BtnMore:focus ~ .BtnMore-Label {
+.btn-more:focus ~ .btn-more-label {
   background: #5e5e5e;
 }
-
 /*More-container*/
-.moreList {
+.more-list {
   display: none;
   justify-content: space-around;
   flex-direction: row;
@@ -116,7 +108,7 @@ img {
   list-style: none;
   padding: 3px;
 }
-.moreList-item {
+.more-list-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,17 +117,15 @@ img {
   padding-top: 5px;
   text-decoration: none;
 }
-
-.BtnMore:checked ~ .moreList {
+.btn-more:checked ~ .more-list {
   display: flex;
 }
-.BtnMore:checked ~ .BtnMore-Label {
+.btn-more:checked ~ .btn-more-label {
   display: none;
 }
-.BtnMore:checked ~ .BtnMore {
+.btn-more:checked ~ .btn-more {
   display: none;
 }
-
 /*Even more from Kottans */
 .more-kottans {
   margin-top: 10px;
@@ -154,5 +144,4 @@ img {
 }
 .more-kottans a:focus {
   background: #5e5e5e;
-  border-color: green;
 }
